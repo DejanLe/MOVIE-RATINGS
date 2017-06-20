@@ -1,0 +1,32 @@
+<%= form_with(model: rating, local: true) do |form| %>
+  <% if rating.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rating.errors.count, "error") %> prohibited this rating from being saved:</h2>
+
+      <ul>
+      <% rating.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :movie_title %>
+    <%= form.text_field :movie_title, id: :rating_movie_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :movie_description %>
+    <%= form.text_area :movie_description, id: :rating_movie_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :movie_video %>
+    <%= form.text_field :movie_video, id: :rating_movie_video %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

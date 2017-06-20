@@ -1,0 +1,101 @@
+// Place all the styles related to the Ratings controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+	font-size: 9px;
+	font-family: 'Bubbler One', sans-serif !important; 
+    text-rendering: optimizelegibility; 
+    font-weight: 300;
+    background:#e3e2dd; 
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff !important;
+    font-family: 'Bubbler One', sans-serif;
+
+}
+.navbar-inverse .navbar-brand {
+    color: #fff !important;
+}
+.navbar-brand {
+    float: left;
+    padding: 15px 15px;
+    font-size: 28px;
+    line-height: 20px;
+    height: 50px;
+}
+movierating_index ol li , a{
+    color: red !important;
+    font-weight: 700;
+}
+.movierating_index{
+	clear: both; 
+    line-height: 1.3em;
+    font-weight: normal;
+    padding-top: .25em;
+    color: #999;
+    font-family: 'Bubbler One', sans-serif;
+
+}
+.comment{
+    display:flex;
+}
+.jumbotron{
+    background:url(movie_ratings3.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 350px;
+    font-family: 'Bubbler One', sans-serif;
+
+    h1{
+        color: #fff !important;
+    }
+    p{
+        color: #fff;
+    }
+}
+.show_movierating_index{
+    padding-top: 100px;
+}
+.panel{
+    background:#fafafa!important
+}
+.panel-default{
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 7px);
+    background: linear-gradient(top, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 7px);
+    background-repeat: no-repeat;
+    background-size: 100% 7px;
+    background-color: #FFF;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-top: -1px;
+    margin-bottom: -1px;
+}
+.panel-card{
+
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 7px);
+    background: linear-gradient(top, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 7px);
+    background-repeat: no-repeat;
+    background-size: 100% 7px;
+    background-color: #FFF !important;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-top: -1px;
+    margin-bottom: -1px;
+    padding: 5px;
+}
+.fa-star {
+    color: orange;
+}
+ .new_movierating { 
+    color: #9d9d9d;
+    border: 1px solid red;
+}
+ .btn-xs-delete {
+    padding: 1px 5px !important;
+    font-size: 12px !important;
+    line-height: 1.5 !important; 
+    border-radius: 3px !important;
+    color: #fff !important;
+}

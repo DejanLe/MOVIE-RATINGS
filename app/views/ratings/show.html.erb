@@ -1,0 +1,48 @@
+<div class="show_movierating_index">
+      <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+            	<%= link_to "Back", root_path %>
+ 				<button class="btn btn-default">
+                    <i class="fa fa-thumbs-o-up" aria-hidden="true"> Like</i>
+                    </button>
+                 <span style="color: #111"> 150 Like</span> 
+                                       
+                  <span style="color: #111">  10  </span> 
+                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                    (4.4-5)
+	              <div class="embed-responsive embed-responsive-16by9">
+	                 <iframe class="embed-responsive-item" src="
+	                     <%= @rating.movie_video %> 
+	                   ">                      
+	                   </iframe>
+	               </div>
+	              
+	               <%= @rating.movie_title %>
+	                <%= @rating.movie_description %>
+	              <%= link_to 'Edit', edit_rating_path(@rating) %> |
+	              <%= link_to 'Back', ratings_path %>   
+	                
+                
+           
+         	 </div>
+           <div class="col-xs-12 col-md-4">   
+					 
+             <h3> <%= @rating.comments.count %> Comments</h3> 
+              <%= render @rating.comments %>
+							
+              <h3>Add a Comments: </h3>
+              <%= render "comments/form" %>
+             <br>
+          
+               </div>
+          </div>
+        </div>
+      </div>
+
+
+
+ 

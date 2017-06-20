@@ -1,0 +1,73 @@
+ <%= render "/layouts/header" %>
+<div class="movierating_index">
+  <div class="container">
+
+        <div class="row">
+            <div class="col-md-9 panel panel-default">
+                 
+            <h2> Today movie rating</h2>
+              <% @ratings.last(12).each do |rating| %> 
+                          
+                   <div class="col-md-4 col-sm-4">
+                          <div class="panel panel-card">
+                              <h4> <%= link_to rating.movie_title, rating %></h4>
+                                     
+                              <!-- 16:9 aspect ratio -->
+                                   
+                                 <div class="embed-responsive embed-responsive-16by9">
+                                 <iframe class="embed-responsive-item" src="
+                                   <%= rating.movie_video %> 
+                                ">
+                                          
+                             </iframe>
+                                 </div>
+                           <div class="like">
+                                <button class="btn btn-default">
+                                 <i class="fa fa-thumbs-o-up" aria-hidden="true"><span style="color: #111"> 10 Likes</span> </i>
+                                </button>    
+                                  <i class="fa fa-star" aria-hidden="true"></i>
+                                      <i class="fa fa-star" aria-hidden="true"></i>
+                                      <i class="fa fa-star " aria-hidden="true"></i>
+                                     <i class="fa fa-star-half-o" aria-hidden="true"></i>
+
+                                        (4.4-5)        
+                          <span style="color: #111"> Comments:
+                           <span style="color: blue; font-weight: 900 "><%=  rating.comments.count %>  </span> 
+                          </span>
+                                        
+                                     
+                                   
+
+                              </div>    
+                                
+                                 
+                          </div>
+                                   
+                 </div> 
+                      
+               <% end %>
+                 
+           </div>
+
+
+  
+            <div class="col-md-3">
+                <h3>Latest Rating</h3>
+            <ol>
+               <% @ratings.last(10).each do |rating| %> 
+              <li><%= link_to rating.movie_title, rating %> </li> 
+              
+             <% end %>
+            </ol>
+           
+
+ 
+            </div>
+        </div>
+  </div>
+  
+</div>
+ 
+
+
+ 
