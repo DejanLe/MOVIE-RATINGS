@@ -14,15 +14,7 @@
                   <i class="fa fa-star-o" aria-hidden="true"></i>
                   <i class="fa fa-star-o" aria-hidden="true"></i>
                     (4.4-5)
-	              <div class="embed-responsive embed-responsive-16by9">
-	                 <iframe class="embed-responsive-item" src="
-	                     <%= @rating.movie_video %> 
-	                   ">                      
-	                   </iframe>
-	               </div>
-	              
-	               <%= @rating.movie_title %>
-	                <%= @rating.movie_description %>
+	             <%= react_component 'Movieratings', {rating: @rating}  %> 
 	              <%= link_to 'Edit', edit_rating_path(@rating) %> |
 	              <%= link_to 'Back', ratings_path %>   
 	                
